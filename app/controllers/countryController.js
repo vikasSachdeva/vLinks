@@ -7,10 +7,10 @@
             //Note: The success() function has been deprecated with Angular 1.5+ and then() is now
             //recommended as shown below.
 
-                 countryService.getCustomers()
+                 countryService.getCountryList()
                 .then(function(data) {
-                    $scope.customers = data;
-                    console.log($scope.customers);
+                    $scope.countries = data;
+                    console.log($scope.countries);
                 }, function(data, status, headers, config) {
                     $log.log(data.error + ' ' + status);
                 });
@@ -30,7 +30,7 @@
     
 
 countryController.$inject = ['$scope', 'countryService'];
-    angular.module('customersApp')
+    angular.module('countryListApp')
       .controller('countryController', countryController);
     
 }());

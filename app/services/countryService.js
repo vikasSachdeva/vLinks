@@ -1,7 +1,7 @@
 (function() {
-    var countryService = function($http, $q, $rootScope) {
+    var countryService = function($http, $q) {
        
-        this.getCustomers = function() {
+        this.getCountryList = function() {
             console.log('inside service GetPost');
           var q = $q.defer();
                $http({
@@ -23,8 +23,8 @@
 
 
     };
-    countryService.$inject = ['$http', '$q', '$rootScope'];
-    angular.module('customersApp').service('countryService', countryService);
+    countryService.$inject = ['$http', '$q'];
+    angular.module('countryListApp').service('countryService', countryService);
                                            
 }());
 
